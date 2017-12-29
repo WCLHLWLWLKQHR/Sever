@@ -1,107 +1,83 @@
 package xmu.crms.entity;
 
-import java.util.Arrays;
+import java.math.BigInteger;
+import java.util.Date;
 
 public class Seminar {
-    private int id;
-    private String name;
-    private String description;
-    private String groupingMethod;
-    private String startTime;
-    private String endTime;
-    private Topic[] topics;
-    private Proportions proportions;
+	private BigInteger id;
+	private String name;
+	private String description;
+	private Course course;
+	private Boolean fixed;
+	private Date startTime;
+	private Date endTime;
 
-    public Seminar() {
-    }
+	public BigInteger getId() {
+		return id;
+	}
 
-    public Seminar(int id, String name, String description, String groupingMethod,
-                   String startTime, String endTime, Topic[] topics, Proportions proportions) {
-        this.id = id;
-        this.name = name;
-        this.description = description;
-        this.groupingMethod = groupingMethod;
-        this.startTime = startTime;
-        this.endTime = endTime;
-        this.topics = topics;
-        this.proportions = proportions;
-    }
+	public void setId(BigInteger id) {
+		this.id = id;
+	}
 
-    public int getId() {
-        return id;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public void setId(int id) {
-        this.id = id;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public String getDescription() {
+		return description;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public void setDescription(String description) {
+		this.description = description;
+	}
 
-    public String getDescription() {
-        return description;
-    }
+	public Course getCourse() {
+		return course;
+	}
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
+	public void setCourse(Course course) {
+		this.course = course;
+	}
 
-    public String getGroupingMethod() {
-        return groupingMethod;
-    }
+	public Boolean getFixed() {
+		return fixed;
+	}
 
-    public void setGroupingMethod(String groupingMethod) {
-        this.groupingMethod = groupingMethod;
-    }
+	public void setFixed(Boolean fixed) {
+		this.fixed = fixed;
+	}
 
-    public String getStartTime() {
-        return startTime;
-    }
+	public Date getStartTime() {
+		return startTime;
+	}
 
-    public void setStartTime(String startTime) {
-        this.startTime = startTime;
-    }
+	public void setStartTime(Date startTime) {
+		this.startTime = startTime;
+	}
 
-    public String getEndTime() {
-        return endTime;
-    }
+	public Date getEndTime() {
+		return endTime;
+	}
 
-    public void setEndTime(String endTime) {
-        this.endTime = endTime;
-    }
+	public void setEndTime(Date endTime) {
+		this.endTime = endTime;
+	}
 
-    public Topic[] getTopics() {
-        return topics;
-    }
-
-    public void setTopics(Topic[] topics) {
-        this.topics = topics;
-    }
-
-    public Proportions getProportions() {
-        return proportions;
-    }
-
-    public void setProportions(Proportions proportions) {
-        this.proportions = proportions;
-    }
-
-    @Override
-    public String toString() {
-        return "Seminar{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", description='" + description + '\'' +
-                ", groupingMethod='" + groupingMethod + '\'' +
-                ", startTime='" + startTime + '\'' +
-                ", endTime='" + endTime + '\'' +
-                ", topic=" + Arrays.toString(topics) +
-                ", proportions=" + proportions +
-                '}';
-    }
+	@Override
+	public String toString() {
+		return "Seminar{" +
+				"id=" + id +
+				", name='" + name + '\'' +
+				", description='" + description + '\'' +
+				", course=" + course +
+				", fixed=" + fixed +
+				", startTime=" + startTime +
+				", endTime=" + endTime +
+				'}';
+	}
 }

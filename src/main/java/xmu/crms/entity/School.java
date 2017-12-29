@@ -1,65 +1,52 @@
 package xmu.crms.entity;
 
+import java.math.BigInteger;
+
 public class School {
-    private int id;
-    private String name;
-    private String province;
-    private String city;
+	private BigInteger id;
+	private String name;
+	private String province;
+	private String city;
 
-    public School() {
-    }
+	public BigInteger getId() {
+		return id;
+	}
 
-    public School(int id, String name) {
-        this.id = id;
-        this.name = name;
-    }
+	public void setId(BigInteger id) {
+		this.id = id;
+	}
 
-    public School(int id, String name, String province, String city) {
-        this.id = id;
-        this.name = name;
-        this.province = province;
-        this.city = city;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public int getId() {
-        return id;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    public void setId(int id) {
-        this.id = id;
-    }
+	public String getProvince() {
+		return province;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public void setProvince(String province) {
+		this.province = province;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public String getCity() {
+		return city;
+	}
 
-    public String getProvince() {
-        return province;
-    }
+	public void setCity(String city) {
+		this.city = city;
+	}
 
-    public void setProvince(String province) {
-        this.province = province;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    @Override
-    public String toString() {
-        return "School{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", province='" + province + '\'' +
-                ", city='" + city + '\'' +
-                '}';
-    }
+	@Override
+	public String toString() {
+		return "School{" +
+				"id=" + id +
+				", name='" + name + '\'' +
+				", province='" + province + '\'' +
+				", city='" + city + '\'' +
+				'}';
+	}
 }
