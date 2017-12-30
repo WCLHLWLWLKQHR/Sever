@@ -9,7 +9,7 @@ import xmu.crms.exception.TopicNotFoundException;
 import xmu.crms.service.GradeService;
 import xmu.crms.service.TopicService;
 
-public interface TopicDao {
+public class TopicDao {
 
 	/**
      * 按topicId获取topic.
@@ -17,7 +17,9 @@ public interface TopicDao {
      * @param topicId 要获取的topic的topicId
      * @author lhl
      */
-    Topic getTopicByTopicId(BigInteger topicId);
+    public Topic getTopicByTopicId(BigInteger topicId) {
+     return null;
+    }
 
     
      /**
@@ -27,7 +29,9 @@ public interface TopicDao {
      * @param topic   修改后的讨论课
      * @author lhl
      */
-     void updateTopicByTopicId(Topic topic);
+     public void updateTopicByTopicId(Topic topic) {
+
+     }
 
     
      /**
@@ -37,7 +41,9 @@ public interface TopicDao {
      * @param topicId 要删除的topic的topicId
      * @author lhl
      */
-     void deleteTopicByTopicId(BigInteger topicId);
+     public void deleteTopicByTopicId(BigInteger topicId) {
+
+     }
 
     
      /**
@@ -47,7 +53,9 @@ public interface TopicDao {
      * @param seminarId 课程Id
      * @author lhl
      */
-     List<Topic> listTopicBySeminarId(BigInteger seminarId);
+     public List<Topic> listTopicBySeminarId(BigInteger seminarId) {
+      return null;
+     }
 
      
      /**
@@ -58,7 +66,9 @@ public interface TopicDao {
       * @return 新建话题后给topic分配的Id
       * @author lhl
       */
-     BigInteger insertTopicBySeminarId(Topic topic);
+     public BigInteger insertTopicBySeminarId(Topic topic) {
+      return null;
+     }
 
      
      /**
@@ -70,7 +80,9 @@ public interface TopicDao {
       * @param topicId 话题Id
       * @author lhl
       */
-     void deleteSeminarGroupTopicById(BigInteger groupId,BigInteger topicId);
+     public void deleteSeminarGroupTopicById(BigInteger groupId,BigInteger topicId) {
+
+     }
 
      
       /**
@@ -80,7 +92,9 @@ public interface TopicDao {
       * @param topicId 讨论课Id
       * @author lhl
       */
-     void deleteSeminarGroupTopicByTopicId(BigInteger topicId);
+     public void deleteSeminarGroupTopicByTopicId(BigInteger topicId) {
+
+     }
 
      
       /**
@@ -91,7 +105,9 @@ public interface TopicDao {
       * @return seminarGroupTopic 讨论课小组选题信息
       * @author lhl
       */
-      SeminarGroupTopic getSeminarGroupTopicById(BigInteger topicId, BigInteger groupId);
+      public SeminarGroupTopic getSeminarGroupTopicById(BigInteger topicId, BigInteger groupId) {
+       return null;
+      }
 
       
       /**
@@ -101,7 +117,9 @@ public interface TopicDao {
        * @return list 该小组该堂讨论课选题列表
        * @author lhl
        */
-       List<SeminarGroupTopic> listSeminarGroupTopicByGroupId(BigInteger groupId);
+       public List<SeminarGroupTopic> listSeminarGroupTopicByGroupId(BigInteger groupId) {
+        return null;
+       }
 
        
         /**
@@ -112,5 +130,7 @@ public interface TopicDao {
         * @param seminarId 讨论课Id
         * @author lhl
         */
-        void deleteTopicBySeminarId(BigInteger seminarId);
+        public void deleteTopicBySeminarId(BigInteger seminarId) {
+
+        }
 }

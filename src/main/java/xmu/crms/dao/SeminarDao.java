@@ -5,7 +5,7 @@ import java.util.List;
 
 import xmu.crms.entity.Seminar;
 
-public interface SeminarDao {
+public class SeminarDao {
 	
 	 /**
 	 * 按courseId获取Seminar.
@@ -13,7 +13,9 @@ public interface SeminarDao {
 	 * @param courseId 课程Id
 	 * @return List 讨论课列表
 	 */
-	 List<Seminar> listSeminarByCourseId(BigInteger courseId);
+	 public List<Seminar> listSeminarByCourseId(BigInteger courseId){
+	 	return null;
+	 }
 	
 	
 	 /**
@@ -22,7 +24,9 @@ public interface SeminarDao {
 	 * @author lhl
 	 * @param courseId 课程Id
 	 */
-	 void deleteSeminarByCourseId(BigInteger courseId);
+	 public void deleteSeminarByCourseId(BigInteger courseId) {
+
+	 }
 
 	
 	 /**
@@ -32,7 +36,9 @@ public interface SeminarDao {
 	 * @param seminarId 讨论课的id
 	 * @return 相应的讨论课信息
 	 */
-	 Seminar getSeminarBySeminarId(BigInteger seminarId);
+	 public Seminar getSeminarBySeminarId(BigInteger seminarId){
+		 return null;
+	 }
 	
 	
 	/**
@@ -42,7 +48,9 @@ public interface SeminarDao {
 	 * @param seminarId 讨论课的id
 	 * @param seminar 讨论课信息
 	 */
-	 void updateSeminarBySeminarId(Seminar seminar);
+	 public void updateSeminarBySeminarId(Seminar seminar) {
+
+	 }
 	
 	
 	/**
@@ -51,7 +59,9 @@ public interface SeminarDao {
 	 * @author lhl
 	 * @param seminarId 讨论课的id
 	 */
-	 void deleteSeminarBySeminarId(BigInteger seminarId);
+	 public void deleteSeminarBySeminarId(BigInteger seminarId) {
+
+	 }
 
 	
 	/**
@@ -61,5 +71,7 @@ public interface SeminarDao {
 	 * @param courseId 课程的id
 	 * @param seminar 讨论课信息
 	 */
-	 BigInteger insertSeminarByCourseId(Seminar seminar);
+	 public BigInteger insertSeminarByCourseId(Seminar seminar){
+		 return null;
+	 }
 }

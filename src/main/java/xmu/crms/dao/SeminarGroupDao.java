@@ -5,7 +5,7 @@ import java.util.List;
 
 import xmu.crms.entity.SeminarGroup;
 
-public interface SeminarGroupDao {
+public class SeminarGroupDao {
 
 	/**
      * 按seminarGroupTopicId删除学生打分表.
@@ -13,7 +13,9 @@ public interface SeminarGroupDao {
      * @param seminarGroupTopicId  小组话题表的Id
      * @author lhl
      */
-    void deleteStudentScoreGroupByTopicId(BigInteger seminarGroupTopicId);
+    public void deleteStudentScoreGroupByTopicId(BigInteger seminarGroupTopicId) {
+
+    }
 
     
     /**
@@ -24,7 +26,9 @@ public interface SeminarGroupDao {
      * @return seminarGroup 讨论课小组信息（包括成绩）
      * @author lhl
      */
-    SeminarGroup getSeminarGroupBySeminarGroupId(BigInteger seminarGroupId);
+    public SeminarGroup getSeminarGroupBySeminarGroupId(BigInteger seminarGroupId) {
+        return null;
+    }
     
     
     /**
@@ -36,7 +40,9 @@ public interface SeminarGroupDao {
      * @return List 该课程下所有讨论课列表
      * @author lhl
      */
-    List<SeminarGroup> listSeminarGradeByCourseId(BigInteger userId,BigInteger courseId);
+    public List<SeminarGroup> listSeminarGradeByCourseId(BigInteger userId,BigInteger courseId) {
+        return null;
+    }
 
     /**
      * 提交对其他小组的打分.
@@ -47,7 +53,9 @@ public interface SeminarGroupDao {
      * @param topicId   话题id
      * @author lhl
      */
-    void insertGroupGradeByUserId(BigInteger topicId, BigInteger userId, BigInteger groupId, BigInteger grade);
+    public void insertGroupGradeByUserId(BigInteger topicId, BigInteger userId, BigInteger groupId, BigInteger grade) {
+
+    }
 
     
     /**
@@ -57,7 +65,9 @@ public interface SeminarGroupDao {
      * @param grade            分数
      * @author lhl
      */
-    void updateGroupByGroupId(BigInteger seminar_group_id, BigInteger grade);
+    public void updateGroupByGroupId(BigInteger seminar_group_id, BigInteger grade) {
+
+    }
 
     
     /**
@@ -67,7 +77,9 @@ public interface SeminarGroupDao {
      * @param grade            分数
      * @author lhl
      */
-    void updateGroupReportGradeByGroupId(BigInteger seminar_group_id, BigInteger grade);
+    public void updateGroupReportGradeByGroupId(BigInteger seminar_group_id, BigInteger grade){
+
+    }
 
     
     /**
@@ -77,5 +89,7 @@ public interface SeminarGroupDao {
      * @param grade            分数
      * @author lhl
      */
-    void updateGroupFianlGradeByGroupId(BigInteger seminar_group_id, BigInteger grade);
+    public void updateGroupFianlGradeByGroupId(BigInteger seminar_group_id, BigInteger grade) {
+
+    }
 }

@@ -4,7 +4,7 @@ import java.math.BigInteger;
 
 import xmu.crms.entity.User;
 
-public interface UserDao {
+public class UserDao {
 
 	/**
 	 * 微信登录后用户绑定（创建用户）.
@@ -12,7 +12,9 @@ public interface UserDao {
 	 * @param user 用户信息
 	 * @author lhl
 	 */
-	 void insertUser(User user);
+	 public void insertUser(User user) {
+
+	 }
 	 
 	 /**
 	 * 登陆用户名和密码检验
@@ -21,7 +23,9 @@ public interface UserDao {
 	 * @return user 该用户信息
 	 * @author lhl
 	 */
-	 User getUserByPhoneAndPassword(User user);
+	 public User getUserByPhoneAndPassword(User user) {
+		 return null;
+	 }
 		
 	 
 	 /**
@@ -30,7 +34,9 @@ public interface UserDao {
 	 * @author lhl
 	 * @param user 用户信息(手机号Phone和密码Password)
 	 */
-	 void insertUserByPhoneAndPassword(User user);
+	 public void insertUserByPhoneAndPassword(User user) {
+
+	 }
 	
 	
 	 /**
@@ -38,12 +44,16 @@ public interface UserDao {
 	 * @author lhl
 	 * @param user 用户信息(手机号Phone和密码Password)
 	 */
-	 User getUser(User user);
+	 public User getUser(User user) {
+		 return null;
+	 }
 	 
 	 /**
 	 * 用户解绑(删除用户).
 	 * @author lhl
 	 * @param userId 用户id
 	 */
-	 void deleteUser(BigInteger userId);
+	 public void deleteUser(BigInteger userId) {
+
+	 }
 }
