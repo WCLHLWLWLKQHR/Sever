@@ -14,7 +14,6 @@ public class CourseServiceImpl implements CourseService {
     @Override
     public List<Course> listCourseByUserId(BigInteger userId) throws IllegalArgumentException, CourseNotFoundException {
         return null;
-
     }
 
     @Override
