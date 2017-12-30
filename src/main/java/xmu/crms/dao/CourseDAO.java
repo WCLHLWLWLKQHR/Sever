@@ -31,10 +31,11 @@ public class CourseDAO {
      * <p>按userId创建课程<br>
      *
      * @param course 课程信息
+     * @return courseId 新建课程的id
      * @author lhl
      */
-    public void insertCourseByUserId(Course course) {
-
+    public BigInteger insertCourseByUserId(Course course) {
+        return null;
     }
 
 
@@ -55,7 +56,7 @@ public class CourseDAO {
      * 传入courseId和course信息修改course信息.
      * <p>传入courseId和course信息修改course信息 <br>
      *
-     * @param courseId 课程Id
+     //* @param courseId 课程Id
      * @param course   课程信息
      * @author lhl
      */
@@ -123,8 +124,8 @@ public class CourseDAO {
      * @param courseName  课程名称
      * @param teacherName 教师名称
      * @return List 班级列表
-     * @throws UserNotFoundException   无此姓名的教师
-     * @throws CourseNotFoundException 无此名称的课程
+     //* @throws UserNotFoundException   无此姓名的教师
+     //* @throws CourseNotFoundException 无此名称的课程
      * @author lhl
      */
     public List<ClassInfo> listClassByName(String courseName, String teacherName){

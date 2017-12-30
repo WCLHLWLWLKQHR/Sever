@@ -59,7 +59,7 @@ public interface CourseService {
      * @throws CourseNotFoundException 未找到课程
      * @author ZhouZhongjun
      */
-    void updateCourseByCourseId(BigInteger courseId, Course course);
+    void updateCourseByCourseId(BigInteger courseId, Course course) throws CourseNotFoundException;
 
 
     /**
