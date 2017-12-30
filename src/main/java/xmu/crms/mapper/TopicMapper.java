@@ -58,7 +58,7 @@ public interface TopicMapper {
       * @return 新建话题后给topic分配的Id
       * @author lhl
       */
-     BigInteger insertTopicBySeminarId(Topic topic);
+     BigInteger insertTopic(Topic topic);
 
      
      /**
@@ -107,10 +107,13 @@ public interface TopicMapper {
         /**
         * 按seminarId删除话题.
         * <p>删除某讨论课下的所有Topic<br>
-        * <p>根据seminarId获得topic信息，然后再根据topic删除seninargrouptopic信息和根据seminarGroupTopicId删除StudentScoreGroup信息，最后再根据删除topic信息<br>
+        * <p>根据seminarId获得topic信息（已有），然后再根据topic删除seninargrouptopic信息（已有）
+        * 和根据seminarGroupTopicId删除StudentScoreGroup信息（已有，在SeminarGroupMapper），最后再根据删除topic信息<br>
         *
         * @param seminarId 讨论课Id
         * @author lhl
         */
         void deleteTopicBySeminarId(BigInteger seminarId);
+
+        
 }

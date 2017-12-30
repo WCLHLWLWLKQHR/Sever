@@ -2,6 +2,9 @@ package xmu.crms.mapper;
 
 import java.math.BigInteger;
 
+import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Options;
+
 import xmu.crms.entity.User;
 
 public interface UserMapper {
@@ -12,6 +15,32 @@ public interface UserMapper {
 	 * @param user 用户信息
 	 * @author lhl
 	 */
+	@Insert("INSERT INTO user_info("
+	 		+ "phone,"
+	 		+ "wechat_id,"
+	 		+ "openid,"
+	 		+ "avatar,"
+	 		+ "password,"
+	 		+ "name,"
+	 		+ "school_id,"
+	 		+ "gender,"
+	 		+ "type,"
+	 		+ "number "
+	 		+ "education,"
+	 		+ "title,"
+	 		+ "email"
+	 		+ "VALUES("
+	 		+ "#{name}, "
+	 		+ "#{startDate}, "
+	 		+ "#{endDate},"
+	 		+ "#{teahcher.id},"
+	 		+ "#{description},"
+	 		+ "#{reportPercentage},"
+	 		+ "#{presentationPercentage},"
+	 		+ "#{fivePointPercentage},"
+	 		+ "#{fourPointPercentage},"
+	 		+ "#{threePointPercentage})")
+	 @Options(useGeneratedKeys = true, keyProperty = "id" )  
 	 void insertUser(User user);
 	 
 	 /**
@@ -39,6 +68,20 @@ public interface UserMapper {
 	 * @param user 用户信息(手机号Phone和密码Password)
 	 */
 	 User getUser(User user);
+	 
+	 /**
+	 * 获得用户信息.
+	 * @author lhl
+	 * @param userId
+	 */
+	 User getUserById(Integer userId);
+	 
+	 /**
+	 * 获得用户信息.
+	 * @author lhl
+	 * @param name
+	 */
+	 User getUserByName(String name);
 	 
 	 /**
 	 * 用户解绑(删除用户).

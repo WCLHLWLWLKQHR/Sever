@@ -18,7 +18,8 @@ public interface SeminarMapper {
 	
 	 /**
 	 * 按courseId删除Seminar.
-	 * <p>先根据CourseId获得所有的seminar的信息，然后根据seminar信息删除相关topic的记录，然后再根据SeminarId删除SeminarGroup表记录,最后再将seminar的信息删除<br>
+	 * <p>先根据CourseId获得所有的seminar的信息，然后根据seminar信息删除相关topic的记录(在TopicDaoy已实现)，
+	 * 然后再根据SeminarId删除SeminarGroup表记录(SeminarGroupMapper已实现),最后再将seminar的信息删除<br>
 	 * @author lhl
 	 * @param courseId 课程Id
 	 */
@@ -48,6 +49,7 @@ public interface SeminarMapper {
 	/**
 	 * 按讨论课id删除讨论课.
 	 * <p>用户（老师）通过seminarId删除讨论课<br>(包括删除讨论课包含的topic信息和小组信息).
+	 * <p>实现部分请参考根据courseId删除讨论课
 	 * @author lhl
 	 * @param seminarId 讨论课的id
 	 */
@@ -58,7 +60,6 @@ public interface SeminarMapper {
 	 * 新增讨论课.
 	 * <p>用户（老师）在指定的课程下创建讨论课<br>
 	 * @author lhl
-	 * @param courseId 课程的id
 	 * @param seminar 讨论课信息
 	 */
 	 BigInteger insertSeminarByCourseId(Seminar seminar);

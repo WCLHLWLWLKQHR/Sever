@@ -3,6 +3,7 @@ package xmu.crms.mapper;
 import java.math.BigInteger;
 import java.util.List;
 
+import xmu.crms.entity.Seminar;
 import xmu.crms.entity.SeminarGroup;
 
 public interface SeminarGroupMapper {
@@ -29,14 +30,48 @@ public interface SeminarGroupMapper {
     
     /**
      * 按课程id获取学生该课程所有讨论课
-     * <p>通过课程id获取该课程下学生所有讨论课详细信息（包括成绩）<br>
+     * <p>请通过以下面三个方法实现，获取该学生所有SeminarGroup和Seminar后,筛选出本Seminar的Group<br>
      *
      * @param userId 用户id
+     * @param seminarId 课程id
+     * @return List 该课程下所有讨论课列表
+     * @author lhl
+     */
+    //List<SeminarGroup> listSeminarGradeByCourseId(BigInteger userId,BigInteger seminarId);
+
+    /**
+     * 按课程id获取该课程所有讨论课
      * @param courseId 课程id
      * @return List 该课程下所有讨论课列表
      * @author lhl
      */
-    List<SeminarGroup> listSeminarGradeByCourseId(BigInteger userId,BigInteger courseId);
+    List<Seminar> listSeminarBycourseId(BigInteger courseId);
+
+    
+    /**
+     * 按课程id删除该课程所有讨论课
+     * @param courseId 课程id
+     * @author lhl
+     */
+    void deleteSeminarBycourseId(BigInteger courseId);
+
+    
+    
+    /**
+     * 根据用户id获得该用户的seminarGroupId
+     * @param userId 用户id
+     * @return List 该课程下所有讨论课列表
+     * @author lhl
+     */
+    List<Integer> listSeminarGroupIdByuserId(BigInteger userId);
+
+    /**
+     * 根据seminarGroupId获得该用户的seminarGroup
+     * @param seminarGroupId
+     * @return List 该课程下所有讨论课列表
+     * @author lhl
+     */
+    List<SeminarGroup> listSeminarGroupByseminarGroupId(BigInteger seminarGroupId);
 
     /**
      * 提交对其他小组的打分.

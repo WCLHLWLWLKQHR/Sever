@@ -25,7 +25,7 @@ public interface TopicService {
      * @author aixing
      */
     Topic getTopicByTopicId(BigInteger topicId) throws TopicNotFoundException, IllegalArgumentException;
-    
+
     /**
      * 根据topicId修改topic.
      * <p>根据topicId修改topic<br>
