@@ -12,6 +12,7 @@ public class TopicServiceImpl implements TopicService {
     @Override
     public Topic getTopicByTopicId(BigInteger topicId) throws TopicNotFoundException, IllegalArgumentException {
         return null;
+
     }
 
     @Override
