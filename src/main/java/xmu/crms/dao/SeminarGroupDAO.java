@@ -5,9 +5,9 @@ import java.util.List;
 
 import xmu.crms.entity.SeminarGroup;
 
-public class SeminarGroupDao {
+public class SeminarGroupDAO {
 
-	/**
+    /**
      * 按seminarGroupTopicId删除学生打分表.
      *
      * @param seminarGroupTopicId  小组话题表的Id
@@ -17,7 +17,7 @@ public class SeminarGroupDao {
 
     }
 
-    
+
     /**
      * 获取学生某一堂讨论课的小组信息.
      * <p>获取某学生一堂讨论课的小组信息（包括成绩）<br>
@@ -29,8 +29,8 @@ public class SeminarGroupDao {
     public SeminarGroup getSeminarGroupBySeminarGroupId(BigInteger seminarGroupId) {
         return null;
     }
-    
-    
+
+
     /**
      * 按课程id获取学生该课程所有讨论课
      * <p>通过课程id获取该课程下学生所有讨论课详细信息（包括成绩）<br>
@@ -57,7 +57,7 @@ public class SeminarGroupDao {
 
     }
 
-    
+
     /**
      * 按ID设置小组报告分.
      *
@@ -69,7 +69,7 @@ public class SeminarGroupDao {
 
     }
 
-    
+
     /**
      * 按ID设置小组展示分.
      *
@@ -81,7 +81,7 @@ public class SeminarGroupDao {
 
     }
 
-    
+
     /**
      * 按ID设置小组最终得分分.
      *
